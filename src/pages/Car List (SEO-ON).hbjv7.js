@@ -341,8 +341,12 @@ function getHTMLStar(carId, starred) {
         // '  console.log("className after(" + this.id + "): " + this.className)\n' +
         '}\n' +
         '</script>';
+    
+    // black star sets an black outline
+    const blackStar = '<path fill="black" d="M 12 17.5 L 18.8 21.6 L 18.8 21.6 l -1.9 -7.6 L 22.6 9.02 L 22.6 9.02 l -7.4 -0.7 L 12 1.5 L 12 1.5 L 9 8.3 L 1.5 9.02 L 1.5 9.02 l 5.4 5 L 5.2 21.6 L 5.2 21.6 L 12 17.5 z"></path>';
+    const frontStar = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"></path>';
 
-    const starImage = '<svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="TYVfy NMm5M"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"></path></svg>';
+    const starImage = '<svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="TYVfy NMm5M">' + blackStar + frontStar +'</svg>';
 
     const innerHtml = elementScript + starImage;
 
